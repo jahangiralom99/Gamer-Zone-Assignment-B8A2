@@ -3,10 +3,52 @@
   font-family: "Work Sans", sans-serif;
 }
 /* common styles ------------*/
-.text-common{
-    color: #3C354F;
-    font-weight: 500;
-    font-size: 1.125rem;
+main {
+  padding: 50px 240px;
+}
+
+.goat {
+  font-size: 5.9rem;
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.g-color {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-common {
+  color: #3c354f;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.btn-sing {
+  border-radius: 48px;
+  background: var(
+    --Linear,
+    linear-gradient(90deg, #ff42a5 13.13%, #ff42a5 87.94%)
+  );
+  border: none;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 20px 40px;
+}
+
+.btn-rogue {
+  border-radius: 48px;
+  background: #4ec5f7;
+  border: none;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 20px 40px;
 }
 
 /* start nav --------------- */
@@ -19,10 +61,15 @@ nav {
   padding: 40px;
 }
 
-.nav-img-content{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.nav-img-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-title {
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .info-container {
@@ -38,6 +85,75 @@ nav {
   padding: 1.2rem;
 }
 
-.youtube-color{
-    color: red;
+.youtube-color {
+  color: red;
+}
+/* nav end ---------------------------------- */
+
+/* Banner start  ------------------------------*/
+.banner-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.banner-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #0b0223;
+}
+
+.banner-img img {
+  width: 100%;
+}
+
+.user-content {
+  list-style: none;
+  margin-bottom: 1.3rem;
+}
+
+.user-content li {
+  margin-bottom: 1rem;
+}
+
+.download-color {
+  color: #ff42a5;
+}
+
+.play-color {
+  color: #ff42a5;
+}
+
+/* Responsive  website---------------------------------------------*/
+
+/*  Responsive for Phone device */
+@media screen and (max-width: 576px) {
+  /*main   --------*/
+  main {
+    padding: 2rem;
+  }
+
+  /* nav section  ------*/
+  nav,
+  .info-container,
+  .banner-container {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+
+/* Responsive for Tab or i pad */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  /*main   --------*/
+  main {
+    padding: 3rem;
+  }
+
+    /* nav section  ------*/
+  nav,
+  .banner-container {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+  }
 }
