@@ -2,6 +2,7 @@
   margin: 0;
   font-family: "Work Sans", sans-serif;
 }
+
 /* common styles ---------------------------------------------------------------*/
 .banner-container,
 .we-gamer-container,
@@ -59,7 +60,7 @@
   background: #fff;
   border: none;
   padding: 20px 40px;
-  color: #FF42A5;
+  color: #ff42a5;
   font-size: 20px;
   font-weight: 600;
 }
@@ -194,28 +195,59 @@ nav {
   background: #fff;
 }
 
-.card-container {
+.container {
   margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  align-items: center;
 }
 
 .card {
-  background-color: #fff;
-  box-shadow: 10px 10px 10px #f3eaea;
-  border-radius: 10px;
-  padding: 10px;
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
 }
 
-.card img {
+.hover-image {
   width: 100%;
-  margin-bottom: 24px;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s;
 }
 
-.card img:hover {
-  filter: brightness(40%);
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
 
+.hover-button {
+  padding: 5px;
+  color: #f948b2;
+  border: none;
+  border-radius: 5px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card:hover .hover-image {
+  filter: brightness(70%);
+}
+
+.card:hover .overlay {
+  opacity: 1;
 }
 
 .online-game {
@@ -267,7 +299,6 @@ nav {
 }
 /* end ---------------------------------- */
 
-
 /* careers section start ----------------------- */
 .careers-container {
   background: linear-gradient(90deg, #ff42a5 13.13%, #ff42a5 87.94%);
@@ -308,7 +339,7 @@ nav {
   color: #fff;
 }
 
-.btn-center{
+.btn-center {
   text-align: center;
 }
 
@@ -429,8 +460,10 @@ footer {
     text-align: center;
   }
 
-  .card-container {
-    grid-template-columns: repeat(1, 1fr);
+  .container{
+    align-items: center;grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    align-items: center;
   }
 
   .play-buttom-img img {
@@ -445,13 +478,13 @@ footer {
   .profile img {
     width: 40%;
   }
-  .careers-container{
+  .careers-container {
     padding: 30px;
     flex-direction: column;
     align-items: center;
   }
-  .btn-center{
-    margin-bottom : 140px;
+  .btn-center {
+    margin-bottom: 140px;
   }
   /* ------------------------------------------- */
   /* footer */
@@ -501,8 +534,10 @@ footer {
   .we-gamer-content {
     text-align: center;
   }
-  .card-container {
-    grid-template-columns: repeat(2, 1fr);
+  .container{
+    align-items: center;grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: center;
   }
 
   .play-buttom-img img {
@@ -519,13 +554,13 @@ footer {
     width: 20%;
   }
 
-  .careers-container{
+  .careers-container {
     padding: 30px;
     flex-direction: column;
     align-items: center;
   }
-  .btn-center{
-    margin-bottom : 140px;
+  .btn-center {
+    margin-bottom: 140px;
   }
 
   /* footer */
