@@ -171,7 +171,7 @@ nav {
 }
 /* end we gamer section------------------------------- */
 
-/* start online-game section */
+/* start online-game section ----------------------------*/
 .online-games-container {
   margin-top: 7.5rem;
 }
@@ -217,6 +217,77 @@ nav {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* end --------------------------------------------------- */
+
+/* play-instantly-title start ---------------------- */
+.play-instantly-container {
+  margin-top: 120px;
+}
+
+.play-instantly-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.play-content {
+  text-align: left;
+  padding: 20px;
+}
+
+.play-instantly-img img {
+  width: 100%;
+}
+
+.play-instantly-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.play-buttom-img img {
+  border-radius: 8px;
+  border: 10px solid #fff;
+  width: 20%;
+  position: relative;
+  left: 500px;
+  top: -150px;
+}
+/* end ---------------------------------- */
+
+/* profile games all start */
+.profile-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-content: center;
+  grid-auto-rows: 100px;
+  gap: 25px;
+}
+
+.profile {
+  border-radius: 50px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px;
+}
+
+.profile img {
+  width: 20%;
+}
+
+.profile:hover {
+  background: var(
+    --Linear,
+    linear-gradient(90deg, #ff42a5 13.13%, #ff42a5 87.94%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 50px;
+  border: 1.5px solid var(--Linear, #ff42a5);
+}
 
 /* ------------------------------------------------------------------------------ */
 /* Responsive  website------*/
@@ -230,7 +301,8 @@ nav {
   /* nav section  ------*/
   nav,
   .info-container,
-  .banner-container {
+  .banner-container,
+  .play-instantly-content {
     flex-direction: column;
     margin-top: 20px;
   }
@@ -246,6 +318,19 @@ nav {
   .card-container {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .play-buttom-img img {
+    left: 1px;
+    top: -100px;
+    width: 40%;
+  }
+  .profile-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile img {
+    width: 40%;
+  }
 }
 
 /* ------------------------------------------------------------------------- */
@@ -258,7 +343,8 @@ nav {
 
   /* nav section  ------*/
   nav,
-  .banner-container {
+  .banner-container,
+  .play-instantly-content {
     flex-direction: column;
     gap: 30px;
     margin-top: 20px;
@@ -269,5 +355,22 @@ nav {
 
   .we-gamer-content {
     text-align: center;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .play-buttom-img img {
+    left: 1px;
+    top: -160px;
+    width: 40%;
+  }
+
+  .profile-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .profile img {
+    width: 20%;
   }
 }
