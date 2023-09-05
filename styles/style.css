@@ -2,9 +2,9 @@
   margin: 0;
   font-family: "Work Sans", sans-serif;
 }
-/* common styles ------------*/
+/* common styles ---------------------------------------------------------------*/
 main {
-  padding: 50px 240px;
+  padding: 50px 220px;
 }
 
 .goat {
@@ -51,7 +51,8 @@ main {
   padding: 20px 40px;
 }
 
-/* start nav --------------- */
+/* ------------------------------------------------------------------------ */
+/* start nav --*/
 nav {
   background: #fff;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
@@ -88,7 +89,8 @@ nav {
 .youtube-color {
   color: red;
 }
-/* nav end ---------------------------------- */
+/* ----------------------------------------------------------------------------- */
+/* nav end --*/
 
 /* Banner start  ------------------------------*/
 .banner-container {
@@ -123,9 +125,52 @@ nav {
 .play-color {
   color: #ff42a5;
 }
+/* end banner section---------------------- */
 
-/* Responsive  website---------------------------------------------*/
+/* start we gamer content */
+.we-gamer-container {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
 
+.we-gamer-container img {
+  width: 100%;
+}
+
+.we-gamer-content {
+  width: 70%;
+  text-align: right;
+}
+
+.we-gamer-title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 24px;
+}
+
+.we-gamer-descriptions {
+  margin-bottom: 2rem;
+}
+
+.our-purpose {
+  margin-top: 24px;
+}
+
+.we-gamer-unleash {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #534c64;
+  margin-top: 1rem;
+}
+/* ------------------------------------------------------------------------------ */
+/* Responsive  website------*/
 /*  Responsive for Phone device */
 @media screen and (max-width: 576px) {
   /*main   --------*/
@@ -140,8 +185,16 @@ nav {
     flex-direction: column;
     margin-top: 20px;
   }
+
+  .we-gamer-container{
+    flex-direction: column-reverse;
+  }
+  .we-gamer-content {
+    text-align: center;
+  }
 }
 
+/* ------------------------------------------------------------------------- */
 /* Responsive for Tab or i pad */
 @media screen and (min-width: 576px) and (max-width: 992px) {
   /*main   --------*/
@@ -149,11 +202,18 @@ nav {
     padding: 3rem;
   }
 
-    /* nav section  ------*/
+  /* nav section  ------*/
   nav,
   .banner-container {
     flex-direction: column;
     gap: 30px;
     margin-top: 20px;
+  }
+  .we-gamer-container{
+    flex-direction: column-reverse;
+  }
+
+  .we-gamer-content {
+    text-align: center;
   }
 }
